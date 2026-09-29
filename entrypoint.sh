@@ -56,11 +56,11 @@ fi
 # Update MAJOR/MINOR tag.
 [ "${MAJOR_VERSION_TAG_ONLY}" = 'true' ] && echo_str="major version tag" || echo_str="major/minor version tags"
 echo "[action-update-semver] Create ${echo_str}."
-git tag -fa "${MAJOR}" -m "${MESSAGE}"
-[ "${MAJOR_VERSION_TAG_ONLY}" = 'true' ] || git tag -fa "${MINOR}" -m "${MESSAGE}"
+git tag -f "${MAJOR}" -m "${MESSAGE}"
+[ "${MAJOR_VERSION_TAG_ONLY}" = 'true' ] || git tag -f "${MINOR}" -m "${MESSAGE}"
 if [ -n "${INPUT_TAG}" ] && [ "${MOVE_PATCH_TAG}" = 'true' ]; then
   echo "[action-update-semver] Moves ${TAG} to the latest commit."
-  git tag -fa "${TAG}" -m "${MESSAGE}"
+  git tag -f "${TAG}" -m "${MESSAGE}"
 fi
 
 # Set up remote URL for checkout@v1 action.
