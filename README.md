@@ -15,10 +15,6 @@ It's designed to seamlessly integrate with GitHub Actions. For more details on v
 
 **Optional**. Specifies the existing tag to update from. Defaults to `$GITHUB_REF`.
 
-### `message`
-
-**Optional**. Custom tag message. Default: `Release $TAG`.
-
 ### `major_version_tag_only`
 
 **Optional**. Creates only major version tags. Default: `false`.
