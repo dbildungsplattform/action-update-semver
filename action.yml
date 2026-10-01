@@ -8,9 +8,6 @@ inputs:
   tag:
     description: "Optional. Existing tag to update from. Default comes from $GITHUB_REF."
     required: false
-  message:
-    description: "Tag message."
-    required: false
   major_version_tag_only:
     description: "Optional. Create only major version tags."
     required: false
